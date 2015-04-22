@@ -26,10 +26,23 @@ html body section {
 	color: #20677B;
 }
 
+#footer p {
+	margin: auto;
+}
+
 h1 {
  	color: #20677B;
 	font-size: 5.5rem;
 	font-weight: 600;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.3rem;
+	color: #888;
 }
 
 .logo {
@@ -67,9 +80,13 @@ h1 {
 	height: 300px;
 }
 
+.register-panel h3{
+	color: white;
+}
+
 .button {
-	margin: 0 2px;
-	padding: 10px 20px;
+	margin: 5px 2px;
+	padding: 10px 25px;
 	border-radius: 50px;
 	color: white;
 	border: none;
@@ -83,6 +100,11 @@ h1 {
 	background-color: #6DBE44;
 	font-size: 1.8rem;
 	margin: auto;
+}
+
+.register-button-container{
+	position: absolute;
+	bottom: 20px;
 }
 
 .tweet-button {

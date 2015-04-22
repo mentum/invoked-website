@@ -6,11 +6,12 @@ hljs.configure({tabReplace: '    '});
 hljs.initHighlighting()
 
 var code_samples = {
-	cs : "public string Hello() {...}",
-	python : "import invoked\n\nwith invoked.get_func(repo='invoked-example', func_name='javascript/addition.js:invoke') as clouded_function:\n\n    print clouded_function(2,3)\n\n    # prints 5",
-	go : "func() {...}",
+	cs : 'using Invoked\n\ntry {\n    var add = new Invokable<int>("github/mentum/invoked-samples", "php-addition");\n    var result = await add.CallAsync(5, 10);\n    Console.WriteLine("Success: {0}", result); // Prints 15\n}\ncatch(Exception e) {\n    Console.WriteLine("Error: {0}", e.Message);\n}',
+	python : "import invoked\n\nwith invoked('invoked-example', 'javascript-addition') as cloud_js_add:\n\n    print cloud_js_add(2,3)     # prints 5",
+	go : 'import (\n    "fmt"\n    "github.com/mentum/invoked"\n)\n\nremote_csharp_add := invoked("github/mentum/invoked-samples", "csharp-addition")\n\nres := remote_csharp_add(8, 7)\nfmt.Println(<-res)    // prints 15',
 	ruby : "class Greeter\n  def salute\n    puts 'Hello #{@name}!'\n  end\nend\n\ng = Greeter.new('world')\ng.salute",
-	js : "var invoked = require('invoked');\nvar ffmpeg = invoked('github/slvnperron/ffmpeg-invoked', 'tools/ffmpeg');\nvar result = ffmpeg({\n    frameRate: 45,\n	input: 'https://lol.com/myvideo.mp4'\n});"
+	js : "var invoked = require('invoked');\n\nvar add = invoked('github/mentum/invoked-samples', 'csharp-addition');\nadd(5, 10, function(err, result) {\n    if (err) console.log('Error: ', err);\n    else     console.log('Success: ', result); // Prints 15\n});",
+	sh: "$ curl -X POST https://api.invoked.io/github/mentum/invoked-samples/csharp-addition/invoke \ \n    -H 'Content-Type: application/json'\ \n    -u 'api:<your api key here>'\ \n    -d '{\"a\":5,\"b\":\"10\"}' "
 }
 
 function setActiveButton(elem){
@@ -41,6 +42,21 @@ $('#register').click(function(){
 });
 
 /***
+* Register panel
+**/
+
+$('#pay-button').click(function (e) {
+    console.log('e');
+    handler.open({
+        name: 'Invoked.io',
+        description: 'Private beta access',
+        amount: 100,
+        currency: 'CAD'
+    });
+    e.preventDefault();
+});
+
+/***
 * Payment
 **/
 
@@ -58,17 +74,6 @@ var handler = StripeCheckout.configure({
             }
         });
     }
-});
-
-$('#pay-button').click(function (e) {
-    console.log('e');
-    handler.open({
-        name: 'Invoked.io',
-        description: 'Private beta access',
-        amount: 100,
-        currency: 'CAD'
-    });
-    e.preventDefault();
 });
 
 // Close Checkout on page navigation

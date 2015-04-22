@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="monokai_sublime.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200italic ,400,600,400italic,600italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200italic,400,600,400italic,600italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="style.css">
 
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -28,19 +28,27 @@
 				</div>
 				<div class="col-md-6">
 					<div class="register-panel pull-right">
-						<h3>Use the next generation cloud service before others</h3>
+						<h3>Get full access before everyone</h3>
 						<ul>
-							<li>Decrease you development cost</li>
-							<li>Increase your productivity level</li>
+							<li>Get access to the private beta</li>
+							<li>Get 100$ of free cloud credits on public release</li>
+							<li>Access to the internal development roadmap</li>
 							<li>Get a larger free tier on public release</li>
-							<li>Get an early adopter price on public release</li>
+							<li>Free access to all of invoked.io events, conferences and meetups</li>
 						</ul>
-						<button id="register" class="button no-fill-button">Get started for free</button>
+						<div class="register-button-container">						
+							<button id="register" class="button no-fill-button">Get started for free</button>
+						</div>
 					</div>
 					<div class="register-panel pull-right hidden">
-						<h3>Tweet of pay 1$ to get free acces to private beta</h3>
-						<a class="button tweet-button" href="https://twitter.com/share?url=http%3A%2F%2Finvoked.io&text=Just%20registered%20for%20invoked.io%20private%20beta.%20Embrace%20scaling%20at%20function%20level&via=mentum_io" target="_blank">Tweet <i class="fa fa-twitter"></i> </a>
-						<button id="pay-button" class="button  pay-button">pay 1$</button>
+						<h3>A dime or a tweet</h3>
+						<p>
+							Register to private beta by either showing your <i class="fa fa-heart"></i> on twitter or by investing a single dollar. We'll get back to you in couple of minutes so you can get your access.
+						</p>
+						<div class="register-button-container">
+							<a id="tweet" class="button tweet-button" href="https://twitter.com/share?url=http%3A%2F%2Finvoked.io&text=Just%20registered%20for%20invoked.io%20private%20beta.%20Embrace%20scaling%20at%20function%20level&via=mentum_io" target="_blank">Tweet <i class="fa fa-twitter"></i> </a>
+							<button id="pay-button" class="button  pay-button">Invest 1$</button>
+						</div>
 					</div>
 				</div>
 			</header>
@@ -58,11 +66,11 @@
 						<pre>
 							<code class="js">
 var invoked = require('invoked');
-var ffmpeg = invoked('github/slvnperron/ffmpeg-invoked', 'tools/ffmpeg');
 
-var result = ffmpeg({
-	frameRate: 45,
-	input: 'https://lol.com/myvideo.mp4'
+var add = invoked('github/mentum/invoked-samples', 'csharp-addition');
+add(5, 10, function(err, result) {
+    if (err) console.log('Error: ', err);
+    else     console.log('Success: ', result); // Prints 15
 });
 							</code>
 						</pre>
@@ -72,31 +80,34 @@ var result = ffmpeg({
 			<div class="col-md-5 code-example-right">
 				<div>
 					<h2>Invoke any remote function in your favourite langage.</h2>
+					<button class="button no-fill-button select-langage active" data-langage="js">Nodejs</button>
 					<button class="button no-fill-button select-langage" data-langage="go">GO</button>
 					<button class="button no-fill-button select-langage" data-langage="cs">C#</button>
-					<button class="button no-fill-button select-langage active" data-langage="js">Nodejs</button>
 					<button class="button no-fill-button select-langage" data-langage="ruby">Ruby</button>
 					<button class="button no-fill-button select-langage" data-langage="python">Python</button>
+					<button class="button no-fill-button select-langage" data-langage="sh">Curl</button>
 				</div>
 			</div>
 			</div>
 		</section>
 		<section id="features" class="flex-outer">
 			<div class="container features">
-				<h2>Embrace function level scaling</h2>
+				<h2>Why invoked ?</h2>
 				<div class="col-md-4">
-					<h3>some stuff here</h3>
+					<h3>Scale functions not apps</h3>
 				</div>
 				<div class="col-md-4">
-					<h3>some more</h3>
+					<h3>No one reinvented the wheel</h3>
 				</div>
 				<div class="col-md-4">
-					<h3>even more stuff here</h3>
+					<h3>Focus on feature development</h3>
 				</div>	
 			</div>
 		</section>
 		<section id="footer" class="flex-outer">
-			<p>Made with <i class="fa fa-heart"></i> in Quebec & San Francisco</p>
+			<div class="flex-inner">
+				<p>Made with <i class="fa fa-heart"></i> in Quebec & San Francisco</p>
+			</div>
 		</section>
 
 		<script type="text/javascript" src="main.js"></script>
