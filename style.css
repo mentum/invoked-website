@@ -1,5 +1,10 @@
 /*lighter blue :#3489A1 */
 /*text blue :#20677B */
+html body section {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.7rem;
+}
+
 #nav, #header, #footer {
 	background-color: whitesmoke;
 }
@@ -24,6 +29,14 @@
 h1 {
  	color: #20677B;
 	font-size: 5.5rem;
+	font-weight: 600;
+}
+
+.logo {
+	font-weight: 200;
+  	font-style: italic;
+  	font-size: 35px;
+  	color: #20677B;
 }
 
 .flex-outer {
@@ -46,14 +59,12 @@ h1 {
 }
 
 .register-panel {
+	position: relative;
 	background-color: rgba(180,180,180,0.5);
 	padding: 20px;
 	color: white;
 	width: 450px;
-}
-
-.register-paner h3 {
-	color: white;
+	height: 300px;
 }
 
 .button {
@@ -64,6 +75,14 @@ h1 {
 	border: none;
 	box-shadow: none;
 	outline: none;
+	cursor: pointer;
+}
+
+#register.button  {
+	border-color : #6DBE44;
+	background-color: #6DBE44;
+	font-size: 1.8rem;
+	margin: auto;
 }
 
 .tweet-button {

@@ -34,6 +34,12 @@ $('.select-langage').click(function(){
 	setCodeSample(this);
 });
 
+$('#register').click(function(){
+	$('.register-panel').each(function(){
+		$(this).toggleClass('hidden');
+	});
+});
+
 /***
 * Payment
 **/
