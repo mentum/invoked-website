@@ -1,87 +1,51 @@
 /*lighter blue :#3489A1 */
 /*text blue :#20677B */
-html body section {
+
+/*
+* GLOBAL
+*/
+body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1.7rem;
+	font-weight: 200;
+	color: #444;
 }
 
-#nav, #header, #footer {
-	background-color: whitesmoke;
-}
-
-#header {
-	height: 85vh;
-	color: #20677B;
-}
-#header a{
-	text-decoration: none;
-}
-
-#header a:hover {
-	color: white;
-}
-
-#footer {
-	height: 80px;
-	color: #20677B;
-}
-
-#footer p {
-	margin: auto;
+p {
+	color: #7d7d7d;
 }
 
 h1 {
- 	color: #20677B;
+ 	color: whitesmoke;
 	font-size: 5.5rem;
-	font-weight: 600;
+	font-weight: 200;
+	letter-spacing: 5px;
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 3.5rem;
+	color: #20677B;
 }
 
 h3 {
-	font-size: 2.3rem;
-	color: #888;
+	font-size: 2.5rem;
+	color: #444;
+	font-weight: 200;
 }
 
-.logo {
-	font-weight: 200;
-  	font-style: italic;
-  	font-size: 35px;
-  	color: #20677B;
+section a {
+	text-decoration: none !important;
 }
 
 .flex-outer {
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 	align-items: center;
-	position: relative;
-	justify-content: center;
 }
 
 .flex-inner {
 	width: 1150px;
-	display: flex;
-	align-items: center;
-}
-
-#code-examples {
-	height: 400px;
-	background-color: #3489A1;
-	color: white;
-}
-
-.register-panel {
-	position: relative;
-	background-color: rgba(180,180,180,0.5);
-	padding: 20px;
-	color: white;
-	width: 450px;
-	height: 300px;
-}
-
-.register-panel h3{
-	color: white;
 }
 
 .button {
@@ -93,13 +57,70 @@ h3 {
 	box-shadow: none;
 	outline: none;
 	cursor: pointer;
+	letter-spacing: 1px;
+	font-weight: 400;
 }
 
-#register.button  {
+.no-fill-button {
+	background-color: transparent;
+	border: 1px solid #20677B;
+	color: #20677B;
+}
+
+.no-fill-button:hover, .no-fill-button.active{
+	border-color: #20677B;
+	background-color: #20677B;
+	color: white;
+}
+
+/*
+* NAV
+*/
+
+.logo {
+	font-weight: 200;
+  	font-style: italic;
+  	font-size: 35px;
+  	color: whitesmoke;
+}
+/*
+* HEADER
+*/
+#header {
+	color: white;
+	background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%) 
+}
+
+#header a:hover {
+	color: white;
+}
+
+header {
+	height: 80vh;
+}
+
+header p {
+	color: white;
+}
+
+.register-panel {
+	position: relative;
+	background-color: rgba(180,180,180,0.3);
+	padding: 20px;
+	color: white;
+	width: 450px;
+	height: 300px;
+	letter-spacing: 1px;
+	border-radius: 4px;
+}
+
+.register-panel h3{
+	color: white;
+}
+
+.register-button  {
 	border-color : #6DBE44;
 	background-color: #6DBE44;
-	font-size: 1.8rem;
-	margin: auto;
 }
 
 .register-button-container{
@@ -120,14 +141,28 @@ h3 {
 	background-color: #20677B;
 }
 
-.no-fill-button {
-	background-color: transparent;
-	border: 2px solid white;
+/*
+* FEATURES
+*/
+#features {
+	padding-top: 50px;
+	padding-bottom: 80px;
+	background-color: white;
 }
 
-.no-fill-button:hover, .no-fill-button.active{
-	border-color: #20677B;
-	background-color: #20677B;
+/*
+* CODE EXAMPLES
+*/
+#code-examples {
+	background-image: linear-gradient(160deg, white 35%, whitesmoke 75%);
+	height: 400px;
+	border-top: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
+}
+
+#code-examples h2 {
+	color: #444;
+	font-weight: 200;
 }
 
 .code-editor {
@@ -138,6 +173,12 @@ h3 {
 	height: 25px;
 	border-radius: 4px 4px 0 0;
 	background-color: #E6E6E6;
+}
+
+.code-example-right {
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 .editor-circle {
@@ -159,13 +200,48 @@ h3 {
 	background-color: #23241f;
 	border: none;
 }
+/*
+* QUALIFICATION
+*/
 
-.features {
-	min-height: 500px;
-	padding-top: 150px;
-	text-align: center;
+#no-wheel {
+	padding-top: 70px;
+	padding-bottom: 50px
 }
 
-.features h2 {
-	color: #20677B;
+/*
+* QUALIFICATION
+*/
+#qualifications{
+	padding: 50px 0;
+}
+
+#register-banner {
+	background-color: whitesmoke;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+/*
+* FOOTER
+*/
+#footer {
+	padding-top: 50px;
+	color: white;
+	background-color: #3489A1;
+}
+
+#footer .bottom {
+  padding: 25px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 20px;
+}
+
+#footer p{
+	color: white;
+}
+
+#footer a{
+	color: white;
+	margin: 0 10px
 }
