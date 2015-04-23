@@ -16,7 +16,7 @@ p {
 }
 
 h1 {
- 	color: whitesmoke;
+ 	color: white;
 	font-size: 5.5rem;
 	font-weight: 200;
 	letter-spacing: 5px;
@@ -31,6 +31,7 @@ h3 {
 	font-size: 2.5rem;
 	color: #444;
 	font-weight: 200;
+	margin-bottom: 25px;
 }
 
 section a {
@@ -76,7 +77,6 @@ section a {
 /*
 * NAV
 */
-
 .logo {
 	font-weight: 200;
   	font-style: italic;
@@ -91,6 +91,12 @@ section a {
 	background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%) 
 }
 
+#header .flex-inner {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
 #header a:hover {
 	color: white;
 }
@@ -103,13 +109,18 @@ header p {
 	color: white;
 }
 
+header h2 {
+	font-size: 2.5rem;
+  	color: whitesmoke;
+  	font-weight: 200;
+}
 .register-panel {
 	position: relative;
 	background-color: rgba(180,180,180,0.3);
 	padding: 20px;
 	color: white;
 	width: 450px;
-	height: 300px;
+	height: 350px;
 	letter-spacing: 1px;
 	border-radius: 4px;
 }
@@ -203,7 +214,6 @@ header p {
 /*
 * QUALIFICATION
 */
-
 #no-wheel {
 	padding-top: 70px;
 	padding-bottom: 50px
@@ -222,13 +232,17 @@ header p {
 	padding-bottom: 25px;
 }
 
+.or-separator{
+	margin: 0 10px;
+}
+
 /*
 * FOOTER
 */
 #footer {
 	padding-top: 50px;
 	color: white;
-	background-color: #3489A1;
+	background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%);
 }
 
 #footer .bottom {
