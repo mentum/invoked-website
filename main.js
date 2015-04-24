@@ -3,7 +3,7 @@
 **/
 
 hljs.configure({tabReplace: '    '});
-hljs.initHighlighting()
+hljs.initHighlighting();
 
 var code_samples = {
 	cs : 'using Invoked\n\ntry {\n    var cloudPhpAdd = new Invokable<int>("github/mentum/invoked-samples", "php-addition");\n    var result = await add.CallAsync(5, 10);\n    Console.WriteLine("Success: {0}", result); // Prints 15\n}\ncatch(Exception e) {\n    Console.WriteLine("Error: {0}", e.Message);\n}',
@@ -12,25 +12,25 @@ var code_samples = {
 	ruby : "class Greeter\n  def salute\n    puts 'Hello #{@name}!'\n  end\nend\n\ng = Greeter.new('world')\ng.salute",
 	js : "var invoked = require('invoked');\n\nvar cloudCsharpAdd = invoked('github/mentum/invoked-samples', 'csharp-addition');\ncloudCsharpAdd(5, 10, function(err, result) {\n    if (err) console.log('Error: ', err);\n    else     console.log('Success: ', result); // Prints 15\n});",
 	sh: "$ curl -X POST https://api.invoked.io/github/mentum/invoked-samples/csharp-addition/invoke \ \n    -H 'Content-Type: application/json'\ \n    -u 'api:<your api key here>'\ \n    -d '{\"a\":5,\"b\":\"10\"}' "
-}
+};
 
 function setActiveButton(elem){
-	$('.select-langage').each(function(){
+	$('.select-language').each(function(){
 		$(this).removeClass('active');
-	})
+	});
 
 	$(elem).addClass('active');
 }
 
 function setCodeSample(elem){
-	var targetLanguage = $(elem).data("langage");
+	var targetLanguage = $(elem).data("language");
 	var code_sample = code_samples[targetLanguage];
 
 	var highlighted = hljs.highlight(targetLanguage, code_sample);
 	$('.editor-body pre code').html(highlighted.value);
 }
 
-$('.select-langage').click(function(){
+$('.select-language').click(function(){
 	setActiveButton(this);
 	setCodeSample(this);
 });
