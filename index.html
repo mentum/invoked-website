@@ -22,106 +22,114 @@
 	<body>
 		<section id="header">
 			<nav class="flex-outer">
-				<div class="flex-inner">
+				<div class="container">
 					<span class="logo">INVOKED</span>
 				</div>
 			</nav>
 			<header class="flex-outer">
-				<div class="flex-inner">
-					<div class="col-md-6">
-						<p>Meet the</p>
-						<h1>World's first function cloud</h1>
-						<h2>Easily deploy and invoke any function in the cloud with any language</h2>
-					</div>
-					<div class="col-md-6">
-						<div class="register-panel pull-right">
-							<h3>Get full access before everyone</h3>
-							<ul>
-								<li>Get access to the private beta</li>
-								<li>Get 100$ of free cloud credits on public release</li>
-								<li>Access to the internal development roadmap</li>
-								<li>Get a larger free tier on public release</li>
-								<li>Free access to all of invoked.io events, conferences and meetups</li>
-							</ul>
-							<div class="register-button-container">
-								<button id="register" class="button register-button">Get started for free</button>
-							</div>
-						</div>
-						<div class="register-panel pull-right hidden">
-							<h3>A dime or a tweet</h3>
-							<p>
-								Register to private beta by either showing your <i class="fa fa-heart"></i> on twitter or by investing a single dollar. We'll get back to you in couple of minutes so you can get your access.
-							</p>
-							<div class="register-button-container">
-								<a id="tweet" class="button tweet-button" href="https://twitter.com/share?url=http%3A%2F%2Finvoked.io&text=Just%20registered%20for%20invoked.io%20private%20beta.%20Embrace%20scaling%20at%20function%20level&via=mentum_io" target="_blank">Tweet <i class="fa fa-twitter"></i> </a>
-								<span class="or-separator">or</span>
-								<button id="pay-button" class="button  pay-button">Invest 1$</button>
-							</div>
-						</div>
-					</div>
+				<div class="container">
+                    <div class="row flex-inner">
+                        <div class="col-md-6">
+                            <p>Meet the</p>
+                            <h1>World's first function cloud</h1>
+                            <h2>Easily deploy and invoke any function in the cloud with any language</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="register-panel">
+                                <h3>Get full access before everyone</h3>
+                                <ul>
+                                    <li>Get access to the private beta</li>
+                                    <li>Get 100$ of free cloud credits on public release</li>
+                                    <li>Access to the internal development roadmap</li>
+                                    <li>Get a larger free tier on public release</li>
+                                    <li>Free access to all of invoked.io events, conferences and meetups</li>
+                                </ul>
+                                <div class="register-button-container">
+                                    <button id="register" class="button register-button">Get started for free</button>
+                                </div>
+                            </div>
+                            <div class="register-panel hidden">
+                                <h3>A dime or a tweet</h3>
+                                <p>
+                                    Register to private beta by either showing your <i class="fa fa-heart"></i> on twitter or by investing a single dollar. We'll get back to you in couple of minutes so you can get your access.
+                                </p>
+                                <div class="register-button-container">
+                                    <a id="tweet" class="button tweet-button" href="https://twitter.com/share?url=http%3A%2F%2Finvoked.io&text=Just%20registered%20for%20invoked.io%20private%20beta.%20Embrace%20scaling%20at%20function%20level&via=mentum_io" target="_blank">Tweet <i class="fa fa-twitter"></i> </a>
+                                    <span class="or-separator">or</span>
+                                    <button id="pay-button" class="button  pay-button">Invest 1$</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</header>
 		</section>
 		<section id="features" class="flex-outer">
-			<div class="flex-inner">
-				<div class="col-md-6">
-					<h3>Scale functions not apps</h3>
-					<p>
-						ilde Banksy meditation 3 wolf moon letterpress pickled Blue Bottle. Scenester you probably haven't heard of them cred, semiotics freegan pour-over messenger bag hoodie Williamsburg VHS flannel pickled.
-					</p>
-				</div>
-				<div class="col-md-6">
-					<h3>Focus on feature development</h3>
-					<p> Let invoked do the dirty work. We handle scale, availability, security and monitoring for you, so you can focus on what really matters: features.
-					</p>
-				</div>
+			<div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Scale functions not apps</h3>
+                        <p>
+                            ilde Banksy meditation 3 wolf moon letterpress pickled Blue Bottle. Scenester you probably haven't heard of them cred, semiotics freegan pour-over messenger bag hoodie Williamsburg VHS flannel pickled.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Focus on feature development</h3>
+                        <p> Let invoked do the dirty work. We handle scale, availability, security and monitoring for you, so you can focus on what really matters: features.
+                        </p>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<section id="code-examples" class="flex-outer">
-			<div class="flex-inner">
-				<div class="col-md-7">
-					<div class="code-editor">
-						<div class="editor-header">
-							<span class="editor-circle"></span>
-							<span class="editor-circle"></span>
-							<span class="editor-circle"></span>
-						</div>
-						<div class="editor-body">
+			<div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-circle"></span>
+                                <span class="editor-circle"></span>
+                                <span class="editor-circle"></span>
+                            </div>
+                            <div class="editor-body">
 							<pre>
 								<code class="js">
-var invoked = require('invoked');
+                                    var invoked = require('invoked');
 
-var add = invoked('github/mentum/invoked-samples', 'csharp-addition');
-add(5, 10, function(err, result) {
-    if (err) console.log('Error: ', err);
-    else     console.log('Success: ', result); // Prints 15
-});
-								</code>
+                                    var add = invoked('github/mentum/invoked-samples', 'csharp-addition');
+                                    add(5, 10, function(err, result) {
+                                    if (err) console.log('Error: ', err);
+                                    else     console.log('Success: ', result); // Prints 15
+                                    });
+                                </code>
 							</pre>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5 code-example-right">
-					<div>
-						<h2>Invoke any remote function in your favourite language.</h2>
-						<button class="button no-fill-button select-language active" data-language="js">Nodejs</button>
-						<button class="button no-fill-button select-language" data-language="go">GO</button>
-						<button class="button no-fill-button select-language" data-language="cs">C#</button>
-						<button class="button no-fill-button select-language" data-language="ruby">Ruby</button>
-						<button class="button no-fill-button select-language" data-language="python">Python</button>
-						<button class="button no-fill-button select-language" data-language="sh">Curl</button>
-					</div>
-				</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 code-example-right">
+                        <div>
+                            <h2>Invoke any remote function in your favourite language.</h2>
+                            <button class="button no-fill-button select-language active" data-language="js">Nodejs</button>
+                            <button class="button no-fill-button select-language" data-language="go">GO</button>
+                            <button class="button no-fill-button select-language" data-language="cs">C#</button>
+                            <button class="button no-fill-button select-language" data-language="ruby">Ruby</button>
+                            <button class="button no-fill-button select-language" data-language="python">Python</button>
+                            <button class="button no-fill-button select-language" data-language="sh">Curl</button>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<section id="no-wheel" class="flex-outer">
-			<div class="flex-inner text-center">
-				<div class="col-md-8 col-md-offset-2">
-					<h3>No one reinvented the wheel again</h3>
-					<p>
-						ilde Banksy meditation 3 wolf moon letterpress pickled Blue Bottle. Scenester you probably haven't heard of them cred, semiotics freegan pour-over messenger bag hoodie Williamsburg VHS flannel pickled.
-					</p>
-				</div>
+			<div class="container text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3>No one reinvented the wheel again</h3>
+                        <p>
+                            ilde Banksy meditation 3 wolf moon letterpress pickled Blue Bottle. Scenester you probably haven't heard of them cred, semiotics freegan pour-over messenger bag hoodie Williamsburg VHS flannel pickled.
+                        </p>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<section id="register-banner" class="text-center">
@@ -131,40 +139,45 @@ add(5, 10, function(err, result) {
 			<button id="pay-button" class="button  pay-button">Invest 1$</button>
 		</section>
 		<section id="qualifications" class="flex-outer">
-			<div class="flex-inner">
-				<div class="col-md-4">
-					<h3>Unobtrusive</h3>
-					<p>No need for you to modify or adapt your existing code base, invoked makes the transition of your functions execution location painless and fun.</p>
-				</div>
-				<div class="col-md-4">
-					<h3>Open source</h3>
-					<p>The core behind invoked is (will shortly be) completely open-source. Found a bug, don't like something or want a new feature? You can actually take a stab at it and contribute.</p>
-				</div>
-				<div class="col-md-4">
-					<h3>Extensible</h3>
-					<p>Because of invoked's open-model design, it is extremely easy to build modules that sit on top of it.</p>
-				</div>
+			<div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Unobtrusive</h3>
+                        <p>No need for you to modify or adapt your existing code base, invoked makes the transition of your functions execution location painless and fun.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Open source</h3>
+                        <p>The core behind invoked is (will shortly be) completely open-source. Found a bug, don't like something or want a new feature? You can actually take a stab at it and contribute.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Extensible</h3>
+                        <p>Because of invoked's open-model design, it is extremely easy to build modules that sit on top of it.</p>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<section id="footer" class="flex-outer">
-			<div class="flex-inner">
-				<div class="col-md-6">
-					<div class="logo">INVOKED</div>
-					<p>Deploy and invoke functions in the cloud within minutes</p>
-				</div>
-				<div class="col-md-6">
-					<div class="row">
-						<p class="pull-right">Jump in the train</p>
-					</div>
-					<div class="row">
-						<a href="http://twitter.com/mentumio" class="pull-right social-icon"><i class="fa fa-tumblr fa-2x"></i></a>
-						<a href="http://twitter.com/mentumio" class="pull-right social-icon"><i class="fa fa-twitter fa-2x"></i></a>
-					</div>
-
-				</div>
-				<div class="col-md-12 bottom text-center">
-					<p>Made with <i class="fa fa-heart"></i> in Quebec & San Francisco</p>
-				</div>
+			<div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">INVOKED</div>
+                        <p>Deploy and invoke functions in the cloud within minutes</p>
+                    </div>
+                    <div class="col-sm-6 social">
+                        <p class="text-right">Jump in the train</p>
+                        <div class="row">
+                            <div class="col-xs-12 text-right">
+                                <a href="http://twitter.com/mentumio" class="social-icon"><i class="fa fa-tumblr fa-2x"></i></a>
+                                <a href="http://twitter.com/mentumio" class="social-icon"><i class="fa fa-twitter fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 bottom text-center">
+                        <p>Made with <i class="fa fa-heart"></i> in Quebec & San Francisco</p>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<script type="text/javascript" src="main.js"></script>

@@ -25,6 +25,7 @@ h1 {
 h2 {
 	font-size: 3.5rem;
 	color: #20677B;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -43,10 +44,6 @@ section a {
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
-}
-
-.flex-inner {
-	width: 1150px;
 }
 
 .button {
@@ -72,6 +69,11 @@ section a {
 	border-color: #20677B;
 	background-color: #20677B;
 	color: white;
+}
+
+div [class*=col-md-6] {
+    margin-left: -1px;
+    margin-right: -1px;
 }
 
 /*
@@ -123,6 +125,7 @@ header h2 {
 	height: 350px;
 	letter-spacing: 1px;
 	border-radius: 4px;
+    float: right;
 }
 
 .register-panel h3{
@@ -263,4 +266,62 @@ header h2 {
 #footer a{
 	color: white;
 	margin: 0 10px
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+    header .register-panel {
+        float: none;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header .container .row .col-md-6:last-child {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 4.5rem;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 3.3rem;
+    }
+
+    h3 {
+        font-size: 2.3rem;
+    }
+
+    header {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    header .register-panel {
+        width: 100%;
+        height: auto;
+    }
+    header .register-panel ul {
+        margin-bottom: 70px;
+        padding-left: 20px;
+    }
+
+    header .register-panel li {
+        font-size: 1.4rem;
+    }
+
+    #footer .social {
+        padding-top: 50px;
+    }
+
+    #footer .social p, #footer .social .col-xs-12 {
+        text-align: center;
+    }
 }
