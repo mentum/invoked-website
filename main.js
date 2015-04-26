@@ -61,7 +61,7 @@ $('#pay-button').click(function (e) {
 **/
 
 var handler = StripeCheckout.configure({
-    key: 'pk_test_XKRvmf8Gs4mO6fC7D7EsSrzH', //CHANGE THIS FOR YOUR OWN KEY.... THIS IS A TEST KEY
+    key: 'pk_live_rNaGl0f4EhfQzMebKLvT8aNx',
     token: function (token) {
         $.ajax({
             type: "POST",
