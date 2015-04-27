@@ -50,9 +50,6 @@ section a {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-
-    /* Bootstrap adds a pseudo element after on display flex containers to clear the floats and it takes 1px. This fixes it.*/
-    /*margin-right: 1px;*/
 }
 
 .button {
