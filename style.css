@@ -50,6 +50,9 @@ section a {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+
+    /* Bootstrap adds a pseudo element after on display flex containers to clear the floats and it takes 1px. This fixes it.*/
+    /*margin-right: 1px;*/
 }
 
 .button {
@@ -75,6 +78,12 @@ section a {
     border-color: #20677B;
     background-color: #20677B;
     color: white;
+}
+
+/* Display flex displays on 2 lines because content is 1px too large*/
+div [class*=col-md-6] {
+    margin-left: -1px;
+    margin-right: -1px;
 }
 
 /*
@@ -219,6 +228,10 @@ header h2 {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.code-example-right button {
+    transition: 0.2s;
 }
 
 .editor-circle {
