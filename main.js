@@ -31,8 +31,8 @@ function setCodeSample(elem){
 }
 
 $('.select-language').click(function(){
-	setActiveButton(this);
-	setCodeSample(this);
+    setActiveButton(this);
+    setCodeSample(this);
 });
 
 $('#register').click(function(){
