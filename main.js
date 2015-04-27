@@ -45,16 +45,18 @@ $('#register').click(function(){
 * Register panel
 **/
 
-$('#pay-button').click(function (e) {
-    console.log('e');
+var handlePaymentForm = function (e) {
+    e.preventDefault();
     handler.open({
         name: 'Invoked.io',
         description: 'Private beta access',
         amount: 100,
         currency: 'CAD'
     });
-    e.preventDefault();
-});
+}
+
+$('#pay-button').click(handlePaymentForm);
+$('#pay-button-2').click(handlePaymentForm);
 
 /***
 * Payment
@@ -70,7 +72,9 @@ var handler = StripeCheckout.configure({
             contentType: 'application/json',
             data: JSON.stringify(token),
             success: function (r) {
-                console.log('success', r);
+                if(console && console.log){
+                    console.log('success', r);
+                }
             }
         });
     }
