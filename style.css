@@ -13,6 +13,8 @@ body {
 
 p {
     color: #7d7d7d;
+    letter-spacing: 1px;
+    line-height: 2.8rem;
 }
 
 h1 {
@@ -25,6 +27,7 @@ h1 {
 h2 {
     font-size: 3.5rem;
     color: #20677B;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -32,6 +35,10 @@ h3 {
     color: #444;
     font-weight: 200;
     margin-bottom: 25px;
+}
+
+.fa-twitter {
+    margin-right: -8px;
 }
 
 section a {
@@ -43,10 +50,6 @@ section a {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-}
-
-.flex-inner {
-    width: 1150px;
 }
 
 .button {
@@ -68,10 +71,16 @@ section a {
     color: #20677B;
 }
 
-.no-fill-button:hover, .no-fill-button.active{
+.no-fill-button:hover, .no-fill-button.active {
     border-color: #20677B;
     background-color: #20677B;
     color: white;
+}
+
+/* Display flex displays on 2 lines because content is 1px too large*/
+div [class*=col-md-6] {
+    margin-left: -1px;
+    margin-right: -1px;
 }
 
 /*
@@ -81,20 +90,31 @@ section a {
     font-weight: 200;
     font-style: italic;
     font-size: 35px;
+    line-height: 70px;
     color: whitesmoke;
 }
+
 /*
 * HEADER
 */
 #header {
     color: white;
-    background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%)
+    background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%);
+    min-height: 425px;
 }
 
 #header .flex-inner {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+}
+
+#header .flex-inner [class*=col-md]:first-child p {
+    margin: 0;
+}
+
+#header .flex-inner [class*=col-md]:first-child h1 {
+    margin-top: 0;
 }
 
 #header a:hover {
@@ -114,27 +134,37 @@ header h2 {
     color: whitesmoke;
     font-weight: 200;
 }
+
 .register-panel {
     position: relative;
-    background-color: rgba(180,180,180,0.3);
+    background-color: rgba(180, 180, 180, 0.3);
     padding: 20px;
     color: white;
     width: 450px;
     height: 350px;
     letter-spacing: 1px;
     border-radius: 4px;
+    float: right;
 }
 
-.register-panel h3{
+.register-panel h3 {
     color: white;
 }
 
-.register-button  {
-    border-color : #6DBE44;
+.register-panel ul li {
+    padding: 5px 0px;
+}
+
+.register-panel p {
+    margin-top: 50px;
+}
+
+.register-button {
+    border-color: #6DBE44;
     background-color: #6DBE44;
 }
 
-.register-button-container{
+.register-button-container {
     position: absolute;
     bottom: 20px;
 }
@@ -150,6 +180,7 @@ header h2 {
 
 .pay-button {
     background-color: #20677B;
+    padding: 9px 25px;
 }
 
 /*
@@ -157,8 +188,12 @@ header h2 {
 */
 #features {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     background-color: white;
+}
+
+#features [class*=col]{
+    padding-bottom: 10px;
 }
 
 /*
@@ -177,7 +212,7 @@ header h2 {
 }
 
 .code-editor {
-    width: 600px;
+    width: 555px;
 }
 
 .editor-header {
@@ -190,6 +225,10 @@ header h2 {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.code-example-right button {
+    transition: 0.2s;
 }
 
 .editor-circle {
@@ -211,19 +250,21 @@ header h2 {
     background-color: #23241f;
     border: none;
 }
-/*
-* QUALIFICATION
-*/
-#no-wheel {
-    padding-top: 70px;
-    padding-bottom: 50px
-}
 
 /*
 * QUALIFICATION
 */
-#qualifications{
+#no-wheel {
+    padding-top: 80px;
+    padding-bottom: 50px
+}
+
+#qualifications {
     padding: 50px 0;
+}
+
+#qualifications [class*=col]{
+    padding-bottom: 10px;
 }
 
 #register-banner {
@@ -232,7 +273,7 @@ header h2 {
     padding-bottom: 25px;
 }
 
-.or-separator{
+.or-separator {
     margin: 0 10px;
 }
 
@@ -246,16 +287,154 @@ header h2 {
 }
 
 #footer .bottom {
-  padding: 25px 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 20px;
+    padding: 25px 5px 15px 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
 }
 
-#footer p{
+#footer .social-icon {
+    transition: 0.3s;
+}
+
+#footer .social-icon:hover {
+    color: lightgray;
+}
+
+#footer p {
     color: white;
 }
 
-#footer a{
+#footer a {
     color: white;
     margin: 0 10px
+}
+
+@media (max-width: 1200px) {
+    #code-examples .container {
+        width: 100%;
+    }
+
+    #code-examples .code-editor {
+        width: 100%;
+    }
+    }
+
+@media (max-width: 992px) {
+    #header {
+        min-height: 750px;
+    }
+
+    #header header {
+        min-height: 700px;
+    }
+
+    header .register-panel {
+        float: none;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header .container .row .col-md-6:last-child {
+        width: 100%;
+    }
+
+    #code-examples .editor-body {
+        height: 300px;
+    }
+
+    #code-examples {
+         height: 250px;
+     }
+
+    #code-examples button {
+        font-size: 1.3rem;
+        padding: 8px 16px;
+    }
+
+    #code-examples .code-example-right {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #code-examples .buttons {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    #code-examples .code-example-right {
+        margin-top: 0;
+    }
+
+    #no-wheel .container {
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 4.5rem;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 3.3rem;
+    }
+
+    h3 {
+        font-size: 2.3rem;
+    }
+
+    .fa-twitter {
+        margin-right: -10px;
+    }
+
+    .or-separator {
+        margin: 0 3px 0 6px;
+    }
+
+    header {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    header .register-panel {
+        width: 100%;
+        /*height: auto;*/
+    }
+
+    header .register-panel ul {
+        padding-left: 20px;
+    }
+
+    header .register-panel li, header .register-panel p, header .register-panel a, header .register-panel button {
+        font-size: 1.4rem;
+    }
+
+    .register-panel p {
+        margin-top: 25px;
+    }
+
+    #code-examples {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    #code-examples .code-example-right {
+        height: auto;
+    }
+
+    #footer [class*=col-xs] {
+        width: 100%;
+    }
+
+    #footer .social {
+        padding-top: 50px;
+    }
+
+    #footer .social p, #footer .social .col-xs-12 {
+        text-align: center;
+    }
 }

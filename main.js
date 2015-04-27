@@ -3,7 +3,7 @@
 **/
 
 hljs.configure({tabReplace: '    '});
-hljs.initHighlighting()
+hljs.initHighlighting();
 
 var code_samples = {
     cs : 'using Invoked\n\ntry {\n    var cloudPhpAdd = new Invokable<int>("github/mentum/invoked-samples", "php-addition");\n    var result = await add.CallAsync(5, 10);\n    Console.WriteLine("Success: {0}", result); // Prints 15\n}\ncatch(Exception e) {\n    Console.WriteLine("Error: {0}", e.Message);\n}',
@@ -15,7 +15,7 @@ var code_samples = {
 }
 
 function setActiveButton(elem){
-    $('.select-langage').each(function(){
+    $('.select-language').each(function(){
         $(this).removeClass('active');
     })
 
@@ -23,14 +23,14 @@ function setActiveButton(elem){
 }
 
 function setCodeSample(elem){
-    var targetLanguage = $(elem).data("langage");
+    var targetLanguage = $(elem).data("language");
     var code_sample = code_samples[targetLanguage];
 
     var highlighted = hljs.highlight(targetLanguage, code_sample);
     $('.editor-body pre code').html(highlighted.value);
 }
 
-$('.select-langage').click(function(){
+$('.select-language').click(function(){
     setActiveButton(this);
     setCodeSample(this);
 });
