@@ -98,7 +98,7 @@
 var invoked = require('invoked');
 
 var add = invoked('github/mentum/invoked-samples', 'csharp-addition');
-    add(5, 10, function(err, result) {
+add(5, 10, function(err, result) {
     if (err) console.log('Error: ', err);
     else     console.log('Success: ', result); // Prints 15
 });
