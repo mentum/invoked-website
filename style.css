@@ -5,244 +5,244 @@
 * GLOBAL
 */
 body {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1.7rem;
-	font-weight: 200;
-	color: #444;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #444;
 }
 
 p {
-	color: #7d7d7d;
+    color: #7d7d7d;
 }
 
 h1 {
- 	color: white;
-	font-size: 5.5rem;
-	font-weight: 200;
-	letter-spacing: 5px;
+    color: white;
+    font-size: 5.5rem;
+    font-weight: 200;
+    letter-spacing: 5px;
 }
 
 h2 {
-	font-size: 3.5rem;
-	color: #20677B;
+    font-size: 3.5rem;
+    color: #20677B;
 }
 
 h3 {
-	font-size: 2.5rem;
-	color: #444;
-	font-weight: 200;
-	margin-bottom: 25px;
+    font-size: 2.5rem;
+    color: #444;
+    font-weight: 200;
+    margin-bottom: 25px;
 }
 
 section a {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .flex-outer {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .flex-inner {
-	width: 1150px;
+    width: 1150px;
 }
 
 .button {
-	margin: 5px 2px;
-	padding: 10px 25px;
-	border-radius: 50px;
-	color: white;
-	border: none;
-	box-shadow: none;
-	outline: none;
-	cursor: pointer;
-	letter-spacing: 1px;
-	font-weight: 400;
+    margin: 5px 2px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 .no-fill-button {
-	background-color: transparent;
-	border: 1px solid #20677B;
-	color: #20677B;
+    background-color: transparent;
+    border: 1px solid #20677B;
+    color: #20677B;
 }
 
 .no-fill-button:hover, .no-fill-button.active{
-	border-color: #20677B;
-	background-color: #20677B;
-	color: white;
+    border-color: #20677B;
+    background-color: #20677B;
+    color: white;
 }
 
 /*
 * NAV
 */
 .logo {
-	font-weight: 200;
-  	font-style: italic;
-  	font-size: 35px;
-  	color: whitesmoke;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 35px;
+    color: whitesmoke;
 }
 /*
 * HEADER
 */
 #header {
-	color: white;
-	background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%) 
+    color: white;
+    background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%)
 }
 
 #header .flex-inner {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 #header a:hover {
-	color: white;
+    color: white;
 }
 
 header {
-	height: 80vh;
+    height: 80vh;
 }
 
 header p {
-	color: white;
+    color: white;
 }
 
 header h2 {
-	font-size: 2.5rem;
-  	color: whitesmoke;
-  	font-weight: 200;
+    font-size: 2.5rem;
+    color: whitesmoke;
+    font-weight: 200;
 }
 .register-panel {
-	position: relative;
-	background-color: rgba(180,180,180,0.3);
-	padding: 20px;
-	color: white;
-	width: 450px;
-	height: 350px;
-	letter-spacing: 1px;
-	border-radius: 4px;
+    position: relative;
+    background-color: rgba(180,180,180,0.3);
+    padding: 20px;
+    color: white;
+    width: 450px;
+    height: 350px;
+    letter-spacing: 1px;
+    border-radius: 4px;
 }
 
 .register-panel h3{
-	color: white;
+    color: white;
 }
 
 .register-button  {
-	border-color : #6DBE44;
-	background-color: #6DBE44;
+    border-color : #6DBE44;
+    background-color: #6DBE44;
 }
 
 .register-button-container{
-	position: absolute;
-	bottom: 20px;
+    position: absolute;
+    bottom: 20px;
 }
 
 .tweet-button {
-	background-color: #4099FF;
-	text-decoration: none;
+    background-color: #4099FF;
+    text-decoration: none;
 }
 
 .tweet-button:hover {
-	color: white;
+    color: white;
 }
 
 .pay-button {
-	background-color: #20677B;
+    background-color: #20677B;
 }
 
 /*
 * FEATURES
 */
 #features {
-	padding-top: 50px;
-	padding-bottom: 80px;
-	background-color: white;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: white;
 }
 
 /*
 * CODE EXAMPLES
 */
 #code-examples {
-	background-image: linear-gradient(160deg, white 35%, whitesmoke 75%);
-	height: 400px;
-	border-top: solid 1px #ddd;
-	border-bottom: solid 1px #ddd;
+    background-image: linear-gradient(160deg, white 35%, whitesmoke 75%);
+    height: 400px;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
 }
 
 #code-examples h2 {
-	color: #444;
-	font-weight: 200;
+    color: #444;
+    font-weight: 200;
 }
 
 .code-editor {
-	width: 600px;
+    width: 600px;
 }
 
 .editor-header {
-	height: 25px;
-	border-radius: 4px 4px 0 0;
-	background-color: #E6E6E6;
+    height: 25px;
+    border-radius: 4px 4px 0 0;
+    background-color: #E6E6E6;
 }
 
 .code-example-right {
-	height: 100%;
-	display: flex;
-	align-items: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .editor-circle {
-	float: left;
-	margin-top: 9px;
-	margin-left: 7px;
-	height: 10px;
-	width: 10px;
-	border-radius: 20px;
-	background-color: #9D9D9D;
+    float: left;
+    margin-top: 9px;
+    margin-left: 7px;
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background-color: #9D9D9D;
 }
 
 .editor-body {
-	height: 475px;
-	background-color: #23241f;
+    height: 475px;
+    background-color: #23241f;
 }
 
 .code-editor pre {
-	background-color: #23241f;
-	border: none;
+    background-color: #23241f;
+    border: none;
 }
 /*
 * QUALIFICATION
 */
 #no-wheel {
-	padding-top: 70px;
-	padding-bottom: 50px
+    padding-top: 70px;
+    padding-bottom: 50px
 }
 
 /*
 * QUALIFICATION
 */
 #qualifications{
-	padding: 50px 0;
+    padding: 50px 0;
 }
 
 #register-banner {
-	background-color: whitesmoke;
-	padding-top: 25px;
-	padding-bottom: 25px;
+    background-color: whitesmoke;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .or-separator{
-	margin: 0 10px;
+    margin: 0 10px;
 }
 
 /*
 * FOOTER
 */
 #footer {
-	padding-top: 50px;
-	color: white;
-	background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%);
+    padding-top: 50px;
+    color: white;
+    background-image: linear-gradient(130deg, #3489A1 20%, #20677B 80%);
 }
 
 #footer .bottom {
@@ -252,10 +252,10 @@ header h2 {
 }
 
 #footer p{
-	color: white;
+    color: white;
 }
 
 #footer a{
-	color: white;
-	margin: 0 10px
+    color: white;
+    margin: 0 10px
 }
