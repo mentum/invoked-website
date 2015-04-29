@@ -46,10 +46,19 @@ section a {
 }
 
 .flex-outer {
+    display: -webkit-box;
+    display: -moz-box; 
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    align-content: space-around;
+    -webkit-align-content: space-around;
+    -moz-align-content: space-around;
     align-items: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
 }
 
 .button {
@@ -105,8 +114,19 @@ div [class*=col-md-6] {
 
 #header .flex-inner {
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     flex-flow: row wrap;
+    align-content: space-around;
+    -webkit-align-content: space-around;
+    -moz-align-content: space-around;
     align-items: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
 }
 
 #header .flex-inner [class*=col-md]:first-child p {
@@ -222,9 +242,22 @@ header h2 {
 }
 
 .code-example-right {
-    height: 100%;
+    height: 475px;
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    -webkit-align-content: space-around;
+    -moz-align-content: space-around;
     align-items: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+
 }
 
 .code-example-right button {
@@ -353,6 +386,7 @@ header h2 {
     }
 
     #code-examples .code-example-right {
+        height: auto;
         margin-top: 25px;
     }
 }
