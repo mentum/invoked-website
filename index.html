@@ -33,28 +33,15 @@
                 <div class="col-md-6">
                     <h1>INVOKED</h1>
 
-                    <h2>Instantly scalable micro-services from any Git repository.</h2>
+                    <h2>Instantly scalable micro-services from any Git repository within minutes.</h2>
                 </div>
                 <div class="col-md-6">
                     <div class="register-panel">
-                        <h3>Get full access before everyone</h3>
-                        <ul>
-                            <li>Get access to the <b>private beta</b></li>
-                            <li>Get a <b>100$ credit</b> on public release</li>
-                            <li>Access to the internal development <b>roadmap</b></li>
-                            <li><b>Free access</b> to invoked.io events and meetups</li>
-                        </ul>
-                        <div class="register-button-container">
-                            <button id="register" class="button register-button">Enroll now !</button>
-                        </div>
-                    </div>
-                    <div class="register-panel hidden">
-                        <h3>A buck or a tweet</h3>
+                        <h3>Register for private beta with a tweet or a buck</h3>
 
                         <p>
-                            Register to private beta by either showing your <i class="fa fa-heart"></i> on twitter or by
-                            investing a single dollar. We'll get back to you in couple of days so you can get your
-                            access.
+                            Register and get <b>100$ on public release</b> and much more.
+                            We'll get back to you as soon as possible so you can get your access.
                         </p>
 
                         <div class="register-button-container">
@@ -63,6 +50,7 @@
                                target="_blank">Tweet <i class="fa fa-twitter"></i> </a>
                             <span class="or-separator">or</span>
                             <button id="pay-button" class="button pay-button">Invest 1$</button>
+                            <!--<button id="register" class="button register-button">Enroll now !</button>-->
                         </div>
                     </div>
                 </div>
@@ -78,41 +66,11 @@
 
                 <p>
                     A typical modern web server can handle thousands of requests per seconds. Only a bunch of expensive
-                    processes in most web applications are the result of performance bottlenecks. Scale these processes
-                    with INVOKED's instantly scalable micro-services.
+                    processes in most web applications are the result of performance bottlenecks. Make these processes
+                    instantly scalable with invoked.
                 </p>
                 <img class="img-responsive" src="diag.jpg" alt="how invoked works"/>
             </div>
-        </div>
-    </div>
-</section>
-<section id="features" class="flex-outer">
-    <div class="container text-center">
-        <h2>Let INVOKED do the dirty work</h2>
-
-        <div class="col-md-3">
-            <div>
-                <i class="fa fa-signal fa-2x"></i>
-            </div>
-            <h3>Scale</h3>
-        </div>
-        <div class="col-md-3">
-            <div>
-                <i class="fa fa-server fa-2x"></i>
-            </div>
-            <h3>Availability</h3>
-        </div>
-        <div class="col-md-3">
-            <div>
-                <i class="fa fa-shield fa-2x"></i>
-            </div>
-            <h3>Security</h3>
-        </div>
-        <div class="col-md-3">
-            <div>
-                <i class="fa fa-desktop fa-2x"></i>
-            </div>
-            <h3>Monitoring</h3>
         </div>
     </div>
 </section>
@@ -158,20 +116,49 @@ else console.log('Success: ', result); // Prints 15
         </div>
     </div>
 </section>
-<section id="no-wheel" class="flex-outer">
+<section id="features" class="flex-outer">
     <div class="container text-center">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>No one reinvented the wheel</h3>
+            <h2>Let invoked do the dirty work</h2>
 
-                <p>
-                    Invoked is not "yet another platform-as-a-service" that auto-scales your apps according to your
-                    budget. Our solution wasn't to rewrite every function to fit this new model, we actually want you to
-                    use existing functions. We strive to reduce friction when it comes to scale and maintain distributed
-                    functions. With invoked, you can easily cloudify any existing function written in any langage.
+            <div class="col-md-3">
+                <div>
+                    <i class="fa fa-line-chart fa-2x"></i>
+                </div>
+                <h3>Scalability</h3>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <i class="fa fa-server fa-2x"></i>
+                </div>
+                <h3>Availability</h3>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <i class="fa fa-shield fa-2x"></i>
+                </div>
+                <h3>Security</h3>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <i class="fa fa-desktop fa-2x"></i>
+                </div>
+                <h3>Monitoring</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <a class="learn-more" id="features-learn-more" href="#features-learn-more-text" data-toggle="collapse">Learn
+                    more</a>
+
+                <p id="features-learn-more-text" class="collapse">Inovked was designed from the ground up with one thing
+                    in mind : <strong>simplicity</strong>. Everything is handled for you, scalability, availability,
+                    security and monitoring so you and your team can put efforts on what really matters:
+                    <strong>delivering valuable features</strong>.
                 </p>
             </div>
         </div>
+
     </div>
 </section>
 <section id="register-banner" class="text-center">
@@ -219,14 +206,13 @@ else console.log('Success: ', result); // Prints 15
         <div class="row">
             <div class="col-xs-8">
                 <div class="logo">INVOKED</div>
-                <p>Deploy and invoke functions in the cloud within minutes</p>
+                <p>Instantly scalable micro-services from any Git repository within minutes.</p>
             </div>
             <div class="col-xs-4 social">
                 <p class="text-right">Hop on the train</p>
 
                 <div class="row">
                     <div class="col-xs-12 text-right">
-                        <!--<a href="https://twitter.com/mentumio" class="social-icon"><i class="fa fa-tumblr fa-2x"></i></a>-->
                         <a class="social-icon"><i class="fa fa-tumblr fa-2x"></i></a>
                         <a href="https://twitter.com/mentumio" class="social-icon"><i
                                 class="fa fa-twitter fa-2x"></i></a>
@@ -243,6 +229,7 @@ else console.log('Success: ', result); // Prints 15
 </section>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="highlight.pack.js"></script>
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript" src="main.js"></script>
